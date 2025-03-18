@@ -1,4 +1,4 @@
-# pascal-pkgs-ci
+# pascal-pkgs-ci - trying even 900 series gpus
 
 The main repository for building Pascal-compatible versions of ML applications and libraries.
 
