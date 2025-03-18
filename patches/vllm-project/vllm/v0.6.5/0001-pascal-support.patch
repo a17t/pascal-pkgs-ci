@@ -5,7 +5,7 @@
  
  # Supported NVIDIA architectures.
 -set(CUDA_SUPPORTED_ARCHS "7.0;7.2;7.5;8.0;8.6;8.7;8.9;9.0")
-+set(CUDA_SUPPORTED_ARCHS "6.0;6.1;7.0;7.2;7.5;8.0;8.6;8.7;8.9;9.0")
++set(CUDA_SUPPORTED_ARCHS "5.2;6.0;6.1;7.0;7.2;7.5;8.0;8.6;8.7;8.9;9.0")
  
  # Supported AMD GPU architectures.
  set(HIP_SUPPORTED_ARCHS "gfx906;gfx908;gfx90a;gfx940;gfx941;gfx942;gfx1030;gfx1100;gfx1101")
@@ -20,8 +20,8 @@
 +    export PIP_EXTRA_INDEX_URL="https://sasha0552.github.io/pascal-pkgs-ci/" && \
 +    python3 -m pip install transient-package && \
 +    transient-package install --source triton --target triton-pascal && \
-+    sed -e "s/.major < 7/.major < 6/g" \
-+        -e "s/.major >= 7/.major >= 6/g" \
++    sed -e "s/.major < 7/.major < 5/g" \
++        -e "s/.major >= 7/.major >= 5/g" \
 +        -i \
 +        /usr/local/lib/python3.12/dist-packages/torch/_inductor/scheduler.py \
 +        /usr/local/lib/python3.12/dist-packages/torch/utils/_triton.py
