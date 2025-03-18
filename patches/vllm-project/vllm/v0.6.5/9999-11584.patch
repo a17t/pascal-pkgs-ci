@@ -5,7 +5,7 @@
  
  # Static kernels parameters
 -BASE_BLOCK = 128 if current_platform.has_device_capability(80) else 64
-+if current_platform.get_device_capability() == (6, 0):
++if current_platform.get_device_capability() == (5, 2):
 +    BASE_BLOCK = 16
 +elif current_platform.get_device_capability() == (6, 0):  # P100 has 24 KB SM
 +    BASE_BLOCK = 16
